@@ -1,0 +1,44 @@
+.linhas-diagonais {
+  position: fixed; /* trocado de absolute para fixed */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+}
+
+.linhas-diagonais::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 150%;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(120, 120, 120, 0.08) 0px,
+    rgba(120, 120, 120, 0.08) 2px,
+    transparent 2px,
+    transparent 80px
+  );
+  transform-origin: center;
+  animation: vibracaoCordas 12s ease-in-out infinite;
+}
+
+
+@keyframes vibracaoCordas {
+  0%, 10%   { transform: none; }
+  25%       { transform: skewX(4deg) skewY(-4deg); }
+  30%       { transform: skewX(-4deg) skewY(4deg); }
+  35%       { transform: skewX(3deg) skewY(-3deg); }
+  40%       { transform: skewX(-3deg) skewY(3deg); }
+  45%       { transform: skewX(2deg) skewY(-2deg); }
+  50%       { transform: skewX(-2deg) skewY(2deg); }
+  55%       { transform: skewX(1deg) skewY(-1deg); }
+  60%       { transform: skewX(-1deg) skewY(1deg); }
+  65%       { transform: skewX(0.5deg) skewY(-0.5deg); }
+  70%       { transform: skewX(-0.5deg) skewY(0.5deg); }
+  75%, 100% { transform: none; }
+}

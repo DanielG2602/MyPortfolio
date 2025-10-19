@@ -1,0 +1,79 @@
+/* Footer base */
+.footer {
+  background-color: #000;
+  color: #f0f0f0;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Título */
+.footer-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* E-mail */
+.footer-email {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+}
+
+/* Ícones sociais */
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-link img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover img {
+  transform: scale(1.1);
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: #aaa;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-title {
+    font-size: 1.5rem;
+  }
+
+  .footer-email {
+    font-size: 0.95rem;
+  }
+}
+
+.social-icons{
+    color: #aaa;
+}

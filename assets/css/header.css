@@ -1,0 +1,83 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #f2f2f2;
+  padding: 10px 5%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo-icon {
+    width: 60px; 
+    height: 60px; 
+}
+
+.logo-icon img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+.social-icons img {
+    width: 30px; 
+    height: 30px;
+    display: block;
+}
+
+.nav-groups {
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+.main-menu, .social-icons {
+    list-style: none; 
+    display: flex; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.main-menu li a {
+    margin: 0 15px; 
+    color: #000;
+    text-decoration: underline; 
+    font-size: 1.0em; 
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.social-icons li {
+    margin-left: 15px;
+}
+
+.social-icons li a {
+    text-decoration: none;
+}
+
+body.dark nav {
+  background-color: #000;
+}
+
+body.dark .main-menu li a {
+  color: #f0f0f0;
+}
+
+body.dark .social-icons li a img {
+  filter: brightness(0) invert(1); /* deixa os ícones brancos */
+}
+
+body.dark .logo-icon svg {
+  fill: #ffffff; /* muda a cor para branco no modo escuro */
+}
+
+section {
+  scroll-margin-top: 80px; /* ajuste conforme a altura da sua navbar */
+}

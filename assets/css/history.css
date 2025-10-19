@@ -1,0 +1,87 @@
+.experiencia-section {
+  padding: 30px 5%;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark .experiencia-section {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.experiencia-titulo {
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Lista de experiências */
+.experiencia-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* Card individual */
+.experiencia-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+body.dark .experiencia-card {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.experiencia-card:hover {
+  transform: scale(1.02);
+}
+
+/* Título da empresa */
+.experiencia-card h4 {
+  font-size: 1.4em;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+body.dark .experiencia-card h4 {
+  color: #f0f0f0;
+}
+
+/* Cargo e descrição */
+.experiencia-card p {
+  margin: 6px 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+body.dark .experiencia-card p {
+  color: #ccc;
+}
+
+/* Período */
+.experiencia-card data {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+body.dark .experiencia-card data {
+  color: #aaa;
+}
+
+/* Responsivo para telas maiores */
+@media (min-width: 768px) {
+  .experiencia-lista {
+    grid-template-columns: 1fr 1fr;
+  }
+}

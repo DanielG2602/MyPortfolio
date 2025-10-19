@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+}
+
+body, html {
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  transition: background 0.3s, color 0.3s;
+  background: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+.page-corner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* acima da .linhas-diagonais */
+}
+
+
+.page-corner {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: #e0e0e0;
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  box-shadow: -2px -2px 5px rgba(0,0,0,0.2);
+  font-size: 24px;
+  color: #333;
+  z-index: 1000;
+  transition: background 0.3s, color 0.3s;
+  padding: 10px;
+  font-size: 28px;
+}
+
+body.dark .page-corner {
+  background: #333;
+  color: #f0f0f0;
+}
+
+.idioma-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #e0e0e0;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, color 0.3s;
+  z-index: 1000;
+}
+
+body.dark .idioma-btn {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+body {
+  padding-top: 80px; /* ajuste conforme a altura real da sua navbar */
+}

@@ -1,0 +1,63 @@
+.ferramentas-section {
+  padding: 40px 5%;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+body.dark .ferramentas-section {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.ferramentas-titulo {
+  font-size: 2em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Lista horizontal de ícones */
+.ferramentas-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Ícones individuais */
+.ferramentas-horizontal li {
+  transition: transform 0.2s ease;
+}
+
+.ferramentas-horizontal li:hover {
+  transform: scale(1.1);
+}
+
+.ferramentas-horizontal li img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+  transition: filter 0.3s ease;
+}
+
+.ferramentas-horizontal li img:hover {
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 600px) {
+  .ferramentas-horizontal {
+    gap: 16px;
+  }
+
+  .ferramentas-horizontal li img {
+    width: 40px;
+    height: 40px;
+  }
+}

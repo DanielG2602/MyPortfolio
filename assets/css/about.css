@@ -1,0 +1,129 @@
+.sobre-mim {
+  padding: 60px 5%;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+body.dark .sobre-mim {
+  background-color: #1a1a1a;
+  color: #ccc;
+}
+
+.sobre-mim h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.perfil {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+.foto-perfil {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+body.dark .foto-perfil {
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+.descricao {
+  max-width: 600px;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.perfil {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10rem;
+  justify-content: center;
+}
+
+.perfil.invertido {
+  flex-direction: row; /* Inverte a ordem: imagem à direita */
+}
+
+.descricao-box {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px 25px;
+  background-color: rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(4px);
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.descricao-box legend {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 0 10px;
+  margin-bottom: -5px; /* aproxima do texto */
+  line-height: 1;
+  color: #333;
+}
+
+body.dark .descricao-box {
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .descricao-box legend {
+  color: #ccc;
+}
+
+
+.foto-wrapper {
+  position: relative;
+  width: 340px; /* largura do contêiner */
+  height: 440px; /* altura maior para destacar bordas superior/inferior */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foto-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  box-shadow:
+    0 0 25px rgba(255, 255, 255, 0.2),
+    inset 0 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.foto-perfil {
+  width: 320px;
+  height: 420px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  border-radius: 12px; /* bordas suaves, retangulares */
+}
+
+body.dark .foto-wrapper::before {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 0 30px rgba(255, 255, 255, 0.1),
+    inset 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .foto-perfil {
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.1);
+}
