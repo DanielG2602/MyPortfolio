@@ -18,7 +18,6 @@ body.dark .ferramentas-section {
   letter-spacing: 1px;
 }
 
-/* Lista horizontal de ícones */
 .ferramentas-horizontal {
   display: flex;
   flex-wrap: wrap;
@@ -29,7 +28,6 @@ body.dark .ferramentas-section {
   margin: 0;
 }
 
-/* Ícones individuais */
 .ferramentas-horizontal li {
   transition: transform 0.2s ease;
 }
@@ -50,7 +48,6 @@ body.dark .ferramentas-section {
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
 }
 
-/* Responsivo para telas menores */
 @media (max-width: 600px) {
   .ferramentas-horizontal {
     gap: 16px;

@@ -50,7 +50,7 @@ body.dark .foto-perfil {
 }
 
 .perfil.invertido {
-  flex-direction: row; /* Inverte a ordem: imagem à direita */
+  flex-direction: row;
 }
 
 .descricao-box {
@@ -68,7 +68,7 @@ body.dark .foto-perfil {
   font-size: 1.3em;
   font-weight: bold;
   padding: 0 10px;
-  margin-bottom: -5px; /* aproxima do texto */
+  margin-bottom: -5px;
   line-height: 1;
   color: #333;
 }
@@ -86,8 +86,8 @@ body.dark .descricao-box legend {
 
 .foto-wrapper {
   position: relative;
-  width: 340px; /* largura do contêiner */
-  height: 440px; /* altura maior para destacar bordas superior/inferior */
+  width: 340px;
+  height: 440px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,7 +114,7 @@ body.dark .descricao-box legend {
   position: relative;
   z-index: 1;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-  border-radius: 12px; /* bordas suaves, retangulares */
+  border-radius: 12px;
 }
 
 body.dark .foto-wrapper::before {

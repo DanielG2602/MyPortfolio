@@ -1,4 +1,3 @@
-/* Footer base */
 .footer {
   background-color: #000;
   color: #f0f0f0;
@@ -12,13 +11,11 @@
   margin: 0 auto;
 }
 
-/* Título */
 .footer-title {
   font-size: 1.8rem;
   margin-bottom: 10px;
 }
 
-/* E-mail */
 .footer-email {
   display: inline-block;
   margin-bottom: 20px;
@@ -31,7 +28,6 @@
   text-decoration: underline;
 }
 
-/* Ícones sociais */
 .social-icons {
   list-style: none;
   padding: 0;
@@ -51,14 +47,12 @@
   transform: scale(1.1);
 }
 
-/* Copyright */
 .footer-copy {
   font-size: 0.9rem;
   margin-top: 20px;
   color: #aaa;
 }
 
-/* Responsivo */
 @media (max-width: 600px) {
   .social-icons {
     flex-wrap: wrap;

@@ -27,7 +27,7 @@ body.dark {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 1000; /* acima da .linhas-diagonais */
+  z-index: 1000;
 }
 
 
@@ -75,5 +75,5 @@ body.dark .idioma-btn {
 }
 
 body {
-  padding-top: 80px; /* ajuste conforme a altura real da sua navbar */
+  padding-top: 80px;
 }

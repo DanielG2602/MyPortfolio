@@ -17,7 +17,6 @@ body.dark .experiencia-section {
   letter-spacing: 1px;
 }
 
-/* Lista de experiências */
 .experiencia-lista {
   list-style: none;
   padding: 0;
@@ -27,7 +26,6 @@ body.dark .experiencia-section {
   gap: 30px;
 }
 
-/* Card individual */
 .experiencia-card {
   background-color: #ffffff;
   border-radius: 12px;
@@ -45,7 +43,6 @@ body.dark .experiencia-card {
   transform: scale(1.02);
 }
 
-/* Título da empresa */
 .experiencia-card h4 {
   font-size: 1.4em;
   margin-bottom: 6px;
@@ -56,7 +53,6 @@ body.dark .experiencia-card h4 {
   color: #f0f0f0;
 }
 
-/* Cargo e descrição */
 .experiencia-card p {
   margin: 6px 0;
   line-height: 1.6;
@@ -67,7 +63,6 @@ body.dark .experiencia-card p {
   color: #ccc;
 }
 
-/* Período */
 .experiencia-card data {
   display: block;
   font-weight: bold;
@@ -79,7 +74,6 @@ body.dark .experiencia-card data {
   color: #aaa;
 }
 
-/* Responsivo para telas maiores */
 @media (min-width: 768px) {
   .experiencia-lista {
     grid-template-columns: 1fr 1fr;

@@ -4,10 +4,9 @@
   margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-align: center; /* ← centraliza o texto */
+  text-align: center; 
 }
 
-/* Container principal da lista de projetos */
 .lista-projetos {
   display: flex;
   flex-direction: column;
@@ -15,7 +14,6 @@
   padding: 40px 5%;
 }
 
-/* Cada item de projeto */
 .lista-projetos li {
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +21,6 @@
   gap: 40px;
 }
 
-/* Imagem do projeto */
 .lista-projetos li img {
   width: 300px;
   height: auto;
@@ -31,7 +28,6 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-/* Informações do projeto */
 .lista-projetos li .info {
   max-width: 500px;
   flex: 1;
@@ -40,14 +36,12 @@
   gap: 12px;
 }
 
-/* Título do projeto */
 .lista-projetos li h3 {
   text-transform: uppercase;
   font-size: 1.4em;
   margin-bottom: 6px;
 }
 
-/* Alternância de layout para projetos pares */
 .lista-projetos li:nth-child(even) {
   flex-direction: row-reverse;
   text-align: right;
@@ -61,7 +55,6 @@
   align-self: flex-end;
 }
 
-/* Alternância de layout para projetos ímpares */
 .lista-projetos li:nth-child(odd) .info {
   align-items: flex-start;
 }
@@ -69,7 +62,7 @@
 .lista-projetos li:nth-child(odd) .btn-projeto {
   align-self: flex-start;
 }
-/* Lista de ferramentas */
+
 .ferramentas {
   display: flex;
   gap: 10px;
@@ -81,7 +74,6 @@
   padding: 0;
 }
 
-/* Estilo de cada ferramenta — sem fundo */
 .ferramentas li {
   padding: 4px;
   border-radius: 6px;
@@ -95,7 +87,6 @@
   transform: scale(1.1);
 }
 
-/* Ícones das ferramentas */
 .ferramentas li img {
   width: 32px;
   height: 32px;
@@ -108,12 +99,10 @@
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
 }
 
-/* Modo escuro — sem fundo */
 body.dark .ferramentas li {
   background-color: transparent;
 }
 
-/* Botão "Ver projeto" */
 .btn-projeto {
   display: flex;
   align-items: center;
@@ -137,7 +126,6 @@ body.dark .ferramentas li {
   transform: scale(1.05);
 }
 
-/* Modo escuro */
 body.dark .btn-projeto {
   background-color: #ccc;
   color: #111;
@@ -151,7 +139,6 @@ body.dark .ferramentas li {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
   .lista-projetos li {
     flex-direction: column !important;
