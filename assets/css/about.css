@@ -1,51 +1,36 @@
+/* =========================================== */
+/* 1. SEÇÃO PRINCIPAL E MODO ESCURO */
+/* =========================================== */
 .sobre-mim {
-  padding: 60px 5%;
+  padding: 80px 5%; /* Mais padding vertical */
   background-color: #f9f9f9;
-  color: #333;
+  color: #fff; /* Texto mais profissional */
+  transition: background-color 0.4s ease, color 0.4s ease; /* Transição suave */
 }
 
 body.dark .sobre-mim {
-  background-color: #1a1a1a;
-  color: #ccc;
+  background-color: #121212;
+  color: #ecf0f1;
 }
 
 .sobre-mim h2 {
-  font-size: 2em;
-  margin-bottom: 30px;
+  font-size: 2.5em; /* Título maior */
+  font-weight: 700;
+  margin-bottom: 40px;
   text-align: center;
+  color: #34495e;
+}
+
+body.dark .sobre-mim h2 {
+  color: #fff; 
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4); /* Brilho sutil branco no título */
 }
 
 .perfil {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 30px;
-  justify-content: center;
-}
-
-.foto-perfil {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-body.dark .foto-perfil {
-  box-shadow: 0 0 10px rgba(255,255,255,0.1);
-}
-
-.descricao {
-  max-width: 600px;
-  font-size: 1.1em;
-  line-height: 1.6;
-}
-
-.perfil {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10rem;
+  align-items: flex-start; /* Alinhamento ao topo */
+  gap: 6rem; /* Ajustado para um visual mais coeso */
   justify-content: center;
 }
 
@@ -53,44 +38,127 @@ body.dark .foto-perfil {
   flex-direction: row;
 }
 
+/* --- ESTILO DA DESCRIÇÃO BOX --- */
+
 .descricao-box {
-  border: 3px solid rgba(0, 0, 0, 0.1);
+  border: none;
   border-radius: 12px;
-  padding: 20px 25px;
-  background-color: rgba(0, 0, 0, 0.03);
-  backdrop-filter: blur(4px);
+  padding: 0;
+  /* background-color: transparent; */
+  backdrop-filter: none;
   max-width: 600px;
   width: 100%;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 .descricao-box legend {
-  font-size: 1.3em;
+  font-size: 1.4em; /* Levemente maior */
   font-weight: bold;
   padding: 0 10px;
-  margin-bottom: -5px;
+  margin-bottom: 5px; /* Mais separação da caixa do terminal */
   line-height: 1;
-  color: #333;
-}
-
-body.dark .descricao-box {
-  border-color: rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.02);
-  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.1);
+  color: #2c3e50;
+  transition: color 0.4s ease;
 }
 
 body.dark .descricao-box legend {
-  color: #ccc;
+  color: #fff; /* Legenda neon */
 }
 
+.descricao {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* =========================================== */
+/* 2. ESTILOS DO TERMINAL (Refinamento Neon) */
+/* =========================================== */
+
+/* 1. Estilo da Janela do Terminal no Modo CLARO */
+/* 1. Estilo da Janela do Terminal no Modo CLARO */
+.descricao.terminal-window {
+    background-color: #fff;
+    color: #333;
+    font-family: 'Consolas', 'Courier New', monospace;
+    
+    /* ALTERAÇÃO CHAVE: Topo 30px | Fundo 10px */
+    padding: 30px 30px 5px 30px; /* Topo: 30px | Lados: 30px | Fundo: 10px */
+    
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    height: 320px; /* Mantém a altura fixa */
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+/* 2. Estilo da Janela do Terminal no Modo ESCURO (Aplicando o mesmo padding) */
+body.dark .descricao.terminal-window {
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+    padding: 30px 30px 5px 30px;
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.15),
+      inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* 3. Estilo para o Texto e Cursor */
+.texto-digitado {
+    display: inline-block; 
+    padding-top: 5px; 
+    white-space: pre-wrap; 
+    
+    /* ALTERAÇÃO CHAVE: Garantir que não haja margem inferior */
+    margin: 0 0 0 0; /* Zerando todas as margens, ou use margin-bottom: 0; */
+    
+    font-size: 1.05em;
+    line-height: 1.6; 
+}
+
+/* 4. Animação do Cursor - Com Cores Adaptáveis */
+
+/* Cursor no modo CLARO */
+.texto-digitado::after {
+    content: '_';
+    display: inline;
+    animation: blink-caret-light 1s step-end infinite; 
+    font-weight: bold;
+}
+
+/* Cursor no modo ESCURO */
+body.dark .texto-digitado::after {
+    animation-name: blink-caret-dark; 
+}
+
+/* Keyframes para o modo CLARO */
+@keyframes blink-caret-light {
+    from, to { color: transparent }
+    50% { color: #333 } 
+}
+
+/* Keyframes para o modo ESCURO */
+@keyframes blink-caret-dark {
+    from, to { color: transparent }
+    50% { color: #fff } 
+}
+
+/* =========================================== */
+/* 3. ESTILOS DA IMAGEM (Melhor Contraste e Efeito) */
+/* =========================================== */
 
 .foto-wrapper {
   position: relative;
-  width: 340px;
-  height: 440px;
+  width: 320px; /* Ajustado para um tamanho mais comum */
+  height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.foto-wrapper:hover {
+  transform: translateY(-5px); /* Efeito de elevação sutil */
 }
 
 .foto-wrapper::before {
@@ -98,32 +166,75 @@ body.dark .descricao-box legend {
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 3px solid rgba(255, 255, 255, 0.4);
+  border: 3px solid rgba(0, 0, 0, 0.1); /* Borda mais sutil no claro */
   border-radius: 12px;
   box-shadow:
-    0 0 25px rgba(255, 255, 255, 0.2),
-    inset 0 0 15px rgba(0, 0, 0, 0.1);
+    0 0 15px rgba(0, 0, 0, 0.08),
+    inset 0 0 10px rgba(0, 0, 0, 0.05);
   z-index: 0;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: all 0.4s ease;
 }
 
 .foto-perfil {
-  width: 320px;
-  height: 420px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   position: relative;
   z-index: 1;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* Sombra mais pronunciada no claro */
   border-radius: 12px;
+  transition: box-shadow 0.4s ease;
 }
 
 body.dark .foto-wrapper::before {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.1);
   box-shadow:
-    0 0 30px rgba(255, 255, 255, 0.1),
-    inset 0 0 15px rgba(255, 255, 255, 0.05);
+    0 0 30px rgba(255, 255, 255, 0.08),
+    inset 0 0 15px rgba(255, 255, 255, 0.03);
 }
 
 body.dark .foto-perfil {
-  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Sombra mais contida no escuro */
+}
+
+/* Adicione esta regra ao seu CSS */
+.prompt-text {
+    font-weight: bold;
+}
+
+/* Cursor no modo CLARO */
+.texto-digitado::after {
+    /* ... outras propriedades ... */
+    font-weight: bold; /* Certifica o negrito do cursor */
+}
+
+/* =========================================== */
+/* 4. RESPONSIVIDADE (Ajustes para Mobile) */
+/* =========================================== */
+
+@media (max-width: 900px) {
+    .perfil {
+        gap: 3rem; 
+    }
+}
+
+@media (max-width: 650px) {
+    .sobre-mim {
+        padding: 50px 5%;
+    }
+    .sobre-mim h2 {
+        font-size: 2em;
+    }
+    .foto-wrapper {
+        width: 100%; /* Ocupa a largura total para ser visível */
+        max-width: 300px;
+        height: 380px; 
+    }
+    .descricao-box {
+        order: 2; /* Move a descrição para baixo em telas pequenas */
+    }
+    .foto-wrapper {
+        order: 1; /* Move a foto para cima (topo) em telas pequenas */
+        margin-bottom: 30px;
+    }
 }
